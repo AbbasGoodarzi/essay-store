@@ -11,12 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', 'Admin\DashboardController@index')->middleware('auth')->name('dashboard.index');
-
+// Auth
 Auth::routes();
 
-Route::get('/home', 'Front\HomeController@index')->name('home');
+// Dashboard routes
+Route::prefix('dashboard')->name('dashboard.')->namespace('Admin')->middleware('auth')->group(function () {
+    Route::get('/', 'DashboardController@index')->name('index');
+
+    Route::resource('articles', 'ArticleController');
+});
+
+// Front routes
+Route::prefix('')->name('front.')->namespace('Front')->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::get('/home', 'HomeController@index')->name('home');
+});

@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  @yield('page_style')
   <!-- Theme style -->
   <link rel="stylesheet" href="/admin/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -96,8 +98,8 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">لینک ها</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li class="active"><a href="{{ route('dashboard.articles.index') }}"><i class="fa fa-link"></i> <span>لیست مقالات</span></a></li>
+        <li><a href="{{ route('dashboard.articles.create') }}"><i class="fa fa-link"></i> <span>افزودن مقاله جدید</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
@@ -133,7 +135,7 @@ desired effect
   <!-- Main Footer -->
   <footer class="main-footer">
     <!-- To the right -->
-    همه حقوق محفوط است
+    همه حقوق محفوظ است
   </footer>
 
 </div>
@@ -145,12 +147,13 @@ desired effect
 <script src="/admin/plugins/jQuery/jQuery-2.2.0.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="/admin/bootstrap/js/bootstrap.min.js"></script>
+
+@yield('page_scripts_src')
+
 <!-- AdminLTE App -->
 <script src="/admin/dist/js/app.min.js"></script>
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. Slimscroll is required when using the
-     fixed layout. -->
+@yield('page_scripts')
+
 </body>
 </html>
