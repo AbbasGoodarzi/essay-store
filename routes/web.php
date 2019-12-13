@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard.index');
