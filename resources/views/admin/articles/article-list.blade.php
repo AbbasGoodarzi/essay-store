@@ -19,6 +19,7 @@
                     <thead>
                     <tr>
                         <th>ردیف</th>
+                        <th>کد</th>
                         <th>عنوان</th>
                         <th>توضیحات</th>
                         <th>تاریخ</th>
@@ -29,6 +30,7 @@
                     @foreach($articles as $article)
                     <tr {!! $article->is_publish ? '' : 'style="background: #f39c12;"' !!}>
                         <td>{{ $loop->iteration }}</td>
+                        <td>{{ $article->code }}</td>
                         <td>{{ $article->title }}</td>
                         <td>{{ mb_substr($article->description, 0, 20) }} ...</td>
                         <td>{{ $article->created_at }}</td>

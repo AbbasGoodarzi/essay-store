@@ -21,6 +21,10 @@
                         <input type="text" name="title" required class="form-control" id="title" placeholder="عنوان مقاله را وارد نمایید">
                     </div>
                     <div class="form-group">
+                        <label for="code">کد مقاله</label>
+                        <input type="text" name="code" required class="form-control" id="code" placeholder="کد مقاله را وارد نمایید">
+                    </div>
+                    <div class="form-group">
                         <label for="description">توضیحات</label>
                         <textarea name="description" style="resize: vertical" rows="5" required class="form-control" id="description" placeholder="توضیحات مقاله را وارد نمایید"></textarea>
                     </div>

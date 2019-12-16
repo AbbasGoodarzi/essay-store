@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id');
             $table->string('title');
+            $table->string('code');
             $table->text('description')->nullable();
             $table->unsignedInteger('view_count')->default('0');
             $table->string('pic_id')->nullable();
