@@ -12,7 +12,7 @@
 */
 
 // Auth
-Auth::routes();
+Auth::routes(['register' => false]);
 
 // Dashboard routes
 Route::prefix('dashboard')->name('dashboard.')->namespace('Admin')->middleware('auth')->group(function () {
