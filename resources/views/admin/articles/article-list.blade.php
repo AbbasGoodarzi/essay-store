@@ -33,7 +33,10 @@
                         <td>{{ $article->code }}</td>
                         <td>{{ $article->title }}</td>
                         <td>{{ mb_substr($article->description, 0, 20) }} ...</td>
-                        <td>{{ $article->created_at }}</td>
+                        @php
+                            $v = verta($article->created_at);
+                        @endphp
+                        <td>{{ $v->formatDate() }}</td>
                         <td>
                             <form action="{{ route('dashboard.articles.destroy', ['article' => $article->id]) }}" method="post" style="font-size: 16px;">
                                 {{ method_field('delete') }}
