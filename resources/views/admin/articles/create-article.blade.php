@@ -34,7 +34,7 @@
                     </div>
                     <div class="form-group">
                         <label for="pic">آپلود عکس مقاله</label>
-                        <input name="pic" type="file" id="pic">
+                        <input name="image" type="file" id="pic">
 
                         <p class="help-block">فرمت های قابل قبول: jpg, png</p>
                     </div>

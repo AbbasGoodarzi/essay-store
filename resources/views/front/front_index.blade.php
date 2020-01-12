@@ -7,7 +7,7 @@
         <div class="d-flex justify-content-center flex-wrap">
             @foreach($articles as $article)
                 <div class="card m-2" style="width: 18rem;">
-                    <img src="front/images/p1.jpg" class="card-img-top" alt="store">
+                    <img src="{{ asset('storage/'.$article->pic_url) }}" class="card-img-top" alt="{{ $article->title }}">
                     <div class="card-body">
                         <h5 class="card-title">
                             <a href="{{ route('front.articles.show', ['article' => $article->id]) }}" class="nav-link p-0 text-dark">{{ $article->title }}</a>

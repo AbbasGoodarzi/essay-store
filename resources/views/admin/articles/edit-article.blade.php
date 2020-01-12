@@ -34,8 +34,12 @@
                         <textarea name="description" style="resize: vertical" rows="5" required class="form-control" id="description" placeholder="توضیحات مقاله را وارد نمایید">{{ $article->description }}</textarea>
                     </div>
                     <div class="form-group">
+                        @if(filled($article->pic_url))
+                            <img src="{{ asset('storage/'.$article->pic_url) }}" class="img-thumbnail" style="margin-bottom: 1em;"  />
+                        @endif
+
                         <label for="pic">آپلود عکس مقاله</label>
-                        <input name="pic" type="file" id="pic">
+                        <input name="image" type="file" id="pic">
 
                         <p class="help-block">فرمت های قابل قبول: jpg, png</p>
                     </div>

@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-12 col-md-8 col-lg-5 d-flex d-md-block justify-content-center">
                     <div class="d-flex justify-content-center single-img mb-4">
-                        <img src="/front/images/p1.jpg" alt="file">
+                        <img src="{{ asset('storage/'.$article->pic_url) }}" alt="{{ $article->title }}">
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-7">

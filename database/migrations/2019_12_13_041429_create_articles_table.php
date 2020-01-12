@@ -21,8 +21,7 @@ class CreateArticlesTable extends Migration
             $table->string('price');
             $table->text('description')->nullable();
             $table->unsignedInteger('view_count')->default('0');
-            $table->string('pic_id')->nullable();
-            $table->string('file_id')->nullable();
+            $table->string('pic_url')->nullable();
             $table->boolean('is_publish')->default('1');
             $table->timestamps();
             $table->softDeletes();
