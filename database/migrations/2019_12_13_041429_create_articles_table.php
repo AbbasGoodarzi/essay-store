@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->unsignedInteger('user_id');
             $table->string('title');
             $table->string('code');
+            $table->string('price');
             $table->text('description')->nullable();
             $table->unsignedInteger('view_count')->default('0');
             $table->string('pic_id')->nullable();

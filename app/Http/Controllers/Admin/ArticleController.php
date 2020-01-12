@@ -24,6 +24,7 @@ class ArticleController extends Controller
         $article = new Article([
             'title' => $request->input('title'),
             'code' => $request->input('code'),
+            'price' => $request->input('price'),
             'description' => $request->input('description'),
             'is_publish' => $request->has('is_publish') ? 1 : 0,
         ]);
@@ -45,6 +46,7 @@ class ArticleController extends Controller
     {
         $article->title = $request->input('title');
         $article->code = $request->input('code');
+        $article->price = $request->input('price');
         $article->description = $request->input('description');
         $article->is_publish = $request->has('is_publish') ? 1 : 0;
         $article->save();

@@ -15,7 +15,7 @@
                         <p class="card-text text-muted o-font-sm">{{ mb_substr($article->description, 0, 70) }}</p>
                     </div>
                     <div class="card-footer">
-                        <p class="text-success text-center">25,000 تومان</p>
+                        <p class="text-success text-center">{{ $article->price == 0 ? 'رایگان' : number_format($article->price) . ' تومان' }}</p>
                         <a href="{{ route('front.articles.show', ['article' => $article->id]) }}" class="btn btn-outline-secondary btn-block">ادامه مطلب</a>
                     </div>
                 </div>

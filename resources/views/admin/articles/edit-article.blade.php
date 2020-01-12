@@ -26,6 +26,10 @@
                         <input type="text" name="code" value="{{ $article->code }}" required class="form-control" id="code" placeholder="کد مقاله را وارد نمایید">
                     </div>
                     <div class="form-group">
+                        <label for="price">قیمت مقاله</label>
+                        <input type="number" min="0" name="price" value="{{ $article->price }}" required class="form-control" id="price" placeholder="قیمت مقاله را وارد نمایید">
+                    </div>
+                    <div class="form-group">
                         <label for="description">توضیحات</label>
                         <textarea name="description" style="resize: vertical" rows="5" required class="form-control" id="description" placeholder="توضیحات مقاله را وارد نمایید">{{ $article->description }}</textarea>
                     </div>

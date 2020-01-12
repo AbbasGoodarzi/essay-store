@@ -14,7 +14,7 @@
                 <div class="col-12 col-md-4 col-lg-7">
                     <h1 class="o-font-md font-weight-bold">{{ $article->title }}</h1>
                     کد مقاله:<span class="text-muted d-block mb-2">{{ $article->code }}</span>
-                    <strong>قیمت محصول: </strong><span class="d-block text-success">25,000 تومان</span>
+                    <strong>قیمت محصول: </strong><span class="d-block text-success">{{ $article->price == 0 ? 'رایگان' : number_format($article->price) . ' تومان' }}</span>
                 </div>
             </div>
             <hr>
