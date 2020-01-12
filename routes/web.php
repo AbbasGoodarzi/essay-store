@@ -29,4 +29,7 @@ Route::prefix('')->name('front.')->namespace('Front')->group(function () {
 
     Route::get('/articles/{article}', 'ArticleController@show')->name('articles.show');
     Route::post('/articles/{article}/request', 'ArticleController@storeRequest')->name('articles.store.request');
+
+    Route::get('/about-us', 'HomeController@showAboutUs')->name('about-us');
+    Route::get('/contact-us', 'HomeController@showContactUs')->name('contact-us');
 });

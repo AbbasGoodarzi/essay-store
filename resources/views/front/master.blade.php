@@ -23,14 +23,14 @@
                     <a class="nav-link" href="{{ route('front.index') }}">صفحه اصلی <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">درباره ما</a>
+                    <a class="nav-link" href="{{ route('front.about-us') }}">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">ارتباط ما</a>
+                    <a class="nav-link" href="{{ route('front.contact-us') }}">ارتباط با ما</a>
                 </li>
             </ul>
             <form class="form-inline flex-nowrap my-2 my-lg-0" action="/" method="get">
-                <input class="form-control mr-sm-2" type="search" name="s" placeholder="جستجو ..." aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="جستجو ..." aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0 ml-md-0 ml-2" type="submit">جستجو</button>
             </form>
         </div>
