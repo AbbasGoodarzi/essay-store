@@ -101,6 +101,7 @@ desired effect
         <li class="active"><a href="{{ route('dashboard.articles.index') }}"><i class="fa fa-link"></i> <span>لیست مقالات</span></a></li>
         <li><a href="{{ route('dashboard.articles.create') }}"><i class="fa fa-link"></i> <span>افزودن مقاله جدید</span></a></li>
         <li><a href="{{ route('dashboard.articles.requests') }}"><i class="fa fa-link"></i> <span>لیست درخواست ها</span></a></li>
+        <li><a href="{{ route('dashboard.settings.index') }}"><i class="fa fa-link"></i> <span>متن درباره ما و تماس با ما</span></a></li>
 {{--        <li class="treeview">--}}
 {{--          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>--}}
 {{--          <ul class="treeview-menu">--}}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Article;
+use App\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -26,11 +27,13 @@ class HomeController extends Controller
 
     public function showAboutUs()
     {
-        return view('front.front_about_us');
+        $about = Setting::where('key', 'about')->first();
+        return view('front.front_about_us', compact('about'));
     }
 
     public function showContactUs()
     {
-        return view('front.front_contact_us');
+        $contact = Setting::where('key', 'contact')->first();
+        return view('front.front_contact_us', compact('contact'));
     }
 }

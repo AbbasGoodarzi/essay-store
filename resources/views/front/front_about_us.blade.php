@@ -7,7 +7,7 @@
         <div class="container">
             <h5>درباره ما</h5>
             <article class="o-font-sm text-dark text-justify">
-                <p></p>
+                <p>{{ @$about->value }}</p>
             </article>
         </div>
     </main>

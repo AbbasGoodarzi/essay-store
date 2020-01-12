@@ -20,6 +20,8 @@ Route::prefix('dashboard')->name('dashboard.')->namespace('Admin')->middleware('
 
     Route::resource('articles', 'ArticleController');
     Route::get('articles-requests', 'ArticleRequestController@index')->name('articles.requests');
+    Route::get('settings', 'SettingController@index')->name('settings.index');
+    Route::post('settings/store', 'SettingController@store')->name('settings.store');
 });
 
 // Front routes

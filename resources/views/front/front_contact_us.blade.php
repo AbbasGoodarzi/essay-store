@@ -7,7 +7,7 @@
         <div class="container">
             <h5>ارتباط با ما</h5>
             <article class="o-font-sm text-dark text-justify">
-                <p></p>
+                <p>{{ @$contact->value }}</p>
             </article>
         </div>
     </main>
