@@ -22,6 +22,11 @@
                 <p>{!! nl2br($article->description) !!}</p>
 
                 <hr>
+                @if($success)
+                    <div class="alert alert-success" role="alert">
+                        سفارش شما با موفقیت ثبت شد
+                    </div>
+                @endif
                 <h5 class="mb-3">فرم ثبت سفارش</h5>
                 <form action="{{ route('front.articles.store.request', ['article' => $article->id]) }}" method="post">
                     @csrf

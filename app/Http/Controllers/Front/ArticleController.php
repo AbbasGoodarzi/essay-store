@@ -9,9 +9,10 @@ use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
-    public function show(Article $article)
+    public function show(Article $article, Request $request)
     {
-        return view('front.front_article_single', compact('article'));
+        $success = $request->has('success');
+        return view('front.front_article_single', compact('article', 'success'));
     }
 
     public function storeRequest(Article $article, Request $request)
@@ -23,6 +24,6 @@ class ArticleController extends Controller
             'email' => $request->input('email'),
         ]);
         $articleRequest->save();
-        return view('front.front_article_single', compact('article'));
+        return redirect()->route('front.articles.show', ['article' => $article->id, 'success' => 1]);
     }
 }
