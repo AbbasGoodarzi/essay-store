@@ -19,13 +19,14 @@ Route::prefix('dashboard')->name('dashboard.')->namespace('Admin')->middleware('
     Route::get('/', 'DashboardController@index')->name('index');
 
     Route::resource('articles', 'ArticleController');
+    Route::get('articles-requests', 'ArticleRequestController@index')->name('articles.requests');
 });
 
 // Front routes
 Route::prefix('')->name('front.')->namespace('Front')->group(function () {
-    Route::get('/', function () {
-        return view('welcome');
-    });
-
+    Route::get('/', 'HomeController@index')->name('index');
     Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::get('/articles/{article}', 'ArticleController@show')->name('articles.show');
+    Route::post('/articles/{article}/request', 'ArticleController@storeRequest')->name('articles.store.request');
 });

@@ -100,13 +100,14 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="{{ route('dashboard.articles.index') }}"><i class="fa fa-link"></i> <span>لیست مقالات</span></a></li>
         <li><a href="{{ route('dashboard.articles.create') }}"><i class="fa fa-link"></i> <span>افزودن مقاله جدید</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>
+        <li><a href="{{ route('dashboard.articles.requests') }}"><i class="fa fa-link"></i> <span>لیست درخواست ها</span></a></li>
+{{--        <li class="treeview">--}}
+{{--          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>--}}
+{{--          <ul class="treeview-menu">--}}
+{{--            <li><a href="#">Link in level 2</a></li>--}}
+{{--            <li><a href="#">Link in level 2</a></li>--}}
+{{--          </ul>--}}
+{{--        </li>--}}
       </ul>
       <!-- /.sidebar-menu -->
     </section>

@@ -1,0 +1,46 @@
+@font-face{
+	font-family:myfont;
+	src:url('../fonts/iranyekanwebbold.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+body{
+    font-family: myfont, serif;
+}
+
+main{
+    margin-bottom: 5rem;
+}
+
+.o-font-xs{
+    font-size: .75rem;
+}
+.o-font-sm{
+    font-size: .85rem;
+}
+.o-font-md{
+    font-size: 1rem;
+}
+
+footer{
+    bottom: 0;
+}
+
+article p{
+    line-height: 28px;
+}
+
+.single-img{
+    max-width: 400px;
+    height: auto;
+}
+
+.single-img img{
+    width: 100%;
+}
+
+article img{
+    width: 100%;
+    height: auto;
+}
